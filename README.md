@@ -1,1 +1,1 @@
-"# class_6_test" 
+" about all class_6 test" 
