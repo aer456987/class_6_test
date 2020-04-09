@@ -1,15 +1,6 @@
-# 檢查檔案是否存在
-import os
-def os_ckeck():
-    filename = 'input.txt'
-    if os.path.isfile(filename):
-        print('檔案存在。\n----------')
-    else:
-        print('檔案不存在')
-
 # 讀取檔案
-def read_file(file_name):
-    with open(file_name, 'r', encoding='utf-8') as f:
+def read_file(filename):
+    with open(filename, 'r', encoding='utf-8') as f:
         lines = []
         for line in f:
             lines.append(line.strip())
@@ -28,16 +19,22 @@ def covert(lines):
         new.append(person + ': ' + line)
     return new
 
-def write_file(flilname, lines):
-	with open(flilname, 'w', encoding='utf-8') as f:
+# 寫入檔案
+def write_file(filename, lines):
+	with open(filename, 'w', encoding='utf-8') as f:
 		for line in lines:
 			f.write(line + '\n')
 
-# main主要function
+# (main)主要function
 def main():
-    lines = read_file('input.txt')
+    import os
+    file_name = 'input.txt'      # 檢查檔案是否存在
+    if os.path.isfile(file_name):
+        print('檔案存在。\n----------')
+    else:
+        print('檔案不存在')
+    lines = read_file(file_name)
     lines = covert(lines)
     write_file('output.txt', lines)
 
-os_ckeck()
 main()
