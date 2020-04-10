@@ -21,9 +21,9 @@ def covert(lines):
 
 # 寫入檔案
 def write_file(filename, lines):
-	with open(filename, 'w', encoding='utf-8') as f:
-		for line in lines:
-			f.write(line + '\n')
+    with open(filename, 'w', encoding='utf-8') as f:
+        for line in lines:
+            f.write(line + '\n')
 
 # (main)主要function
 def main():
