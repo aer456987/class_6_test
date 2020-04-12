@@ -15,6 +15,6 @@ while True:
 			continue
 		elif user_ins == 'n':
 			new_key = input('輸入key: ')
-			new_valur = input('輸入valur: ')
-			dis.setdefault(new_key, new_valur)
+			new_value = input('輸入value: ')
+			dis.setdefault(new_key, new_value)
 			print('新增完成！')
