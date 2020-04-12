@@ -7,7 +7,7 @@ while True:
 	if user_input == 'q':
 		break
 	elif user_input in dic:
-		print(dis[user_input])
+		print(dic[user_input])
 	elif user_input not in dic:
 		print('［找不到資料。］')
 		user_ins = input('r=重新查詢/n=新增資料: ')
@@ -16,5 +16,5 @@ while True:
 		elif user_ins == 'n':
 			new_key = input('輸入key: ')
 			new_value = input('輸入value: ')
-			dis.setdefault(new_key, new_value)
+			dic.setdefault(new_key, new_value)
 			print('新增完成！')
